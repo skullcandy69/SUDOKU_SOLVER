@@ -1,4 +1,6 @@
 
+puzzle= [[0]*9 for i in range(9)]
+
 puzzle = [
             [3, 0, 6, 5, 0, 8, 4, 0, 0],  
             [5, 2, 0, 0, 0, 0, 0, 0, 0],  
@@ -8,8 +10,15 @@ puzzle = [
             [0, 5, 0, 0, 9, 0, 6, 0, 0],  
             [1, 3, 0, 0, 0, 0, 2, 5, 0],  
             [0, 0, 0, 0, 0, 0, 0, 7, 4],  
-            [0, 0, 5, 2, 0, 6, 3, 0, 2]
-            ]  
+            [0, 0, 5, 2, 0, 6, 3, 0, 9]
+            ] 
+
+def input_ele():
+    print("enter elements:")
+    for i in range(1,9):
+        for j in range(1,9):
+            puzzle[i][j]=int(input())
+ 
 def display(puzz):
     for i in range(len(puzz[0])):
         if i%3==0 and i!=0:
